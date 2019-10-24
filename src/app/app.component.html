@@ -1,0 +1,15 @@
+<div class="wrapper">
+<span>TO</span>
+  <div class="container">
+    <span class="emails" *ngFor='let value of values; let i = index ; trackBy: index'>
+      <div>
+        {{value}}
+      </div>
+      <div (click)="removeHandler(i)">
+        X
+      </div>
+    </span>
+  </div>
+  <input rows="1" id=":117" class="editor" [(ngModel)]="myModel" (blur)="onBlurMethod(myModel)" name="to" spellcheck="false" autocomplete="false" style="width: 824px;">
+</div>
+<p>{{message}}</p>
